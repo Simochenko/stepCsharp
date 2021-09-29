@@ -58,16 +58,26 @@ namespace Array
 
             // Списки (List)
 
-           /* List<int> A = new List<int>();
-            A.Add(4);
-            A.Add(5);
-            for(int n = 0; n < A.Count; n++)
+            /* List<int> A = new List<int>();
+             A.Add(4);
+             A.Add(5);
+             for(int n = 0; n < A.Count; n++)
+             {
+                 Console.WriteLine(A[n].ToString());
+             }*/
+
+            Random rnd = new Random();
+            List<double> Q = new List<double>();
+            while(Q.Count < 10)
             {
-                Console.WriteLine(A[n].ToString());
-            }*/
-
-
-
+                Q.Add(rnd.NextDouble());
+            }
+            string s = "";
+            foreach(double x in Q)
+            {
+                s += x.ToString() + " ";
+            }
+            Console.WriteLine(s);
         }
     }
 }
